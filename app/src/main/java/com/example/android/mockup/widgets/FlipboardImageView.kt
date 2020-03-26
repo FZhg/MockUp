@@ -16,7 +16,9 @@ import android.view.animation.AccelerateInterpolator
 import android.view.animation.LinearInterpolator
 import android.widget.ImageView
 
-
+/**
+ * This view widget animates the image in the flipping way, You can find a demo gif at {@link README.md}
+ */
 class FlipboardImageView : androidx.appcompat.widget.AppCompatImageView {
     /**
      * Rotation degree around X or Y axe for the camera.
