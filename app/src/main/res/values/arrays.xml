@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tab_names" >
+        <item>Flipboard翻页</item>
+        <item>即刻点赞</item>
+        <item>薄荷健康卷尺</item>
+        <item>小米运动</item>
+    </array>
+</resources>
