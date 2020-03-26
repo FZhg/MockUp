@@ -173,22 +173,20 @@ class FlipboardImageView : androidx.appcompat.widget.AppCompatImageView {
      * For this Phase, the animator will be AnimatorSet for 2 similar steps
      */
     private fun createAnimatorPhaseTwo(phaseTwoDuration: Long): ObjectAnimator {
-        val cameraRotationPhaseTwoKeyframe1: Keyframe = Keyframe.ofFloat(0f, -50f)
-        val cameraRotationPhaseTwoKeyframe2: Keyframe = Keyframe.ofFloat(0.3f, 0f)
-        val cameraRotationPhaseTwoKeyframe3: Keyframe = Keyframe.ofFloat(1f, -50f)
+        val cameraRotationPhaseTwoKeyStartframe: Keyframe = Keyframe.ofFloat(0f, -50f)
+        val cameraRotationPhaseTwoKeyEndFrame: Keyframe = Keyframe.ofFloat(1f, -50f)
 
 
         val cameraRotationPhaseTwoHolder = PropertyValuesHolder.ofKeyframe(
             CAMERA_ROTATION,
-            cameraRotationPhaseTwoKeyframe1,
-            cameraRotationPhaseTwoKeyframe2,
-            cameraRotationPhaseTwoKeyframe3
+            cameraRotationPhaseTwoKeyStartframe,
+            cameraRotationPhaseTwoKeyEndFrame
         )
-        val canvasRotationPhaseTwoStartingKeyframe: Keyframe = Keyframe.ofFloat(0f, 0f);
+        val canvasRotationPhaseTwoStartKeyframe: Keyframe = Keyframe.ofFloat(0f, 0f);
         val canvasRotationPhaseTwoEndKeyframe: Keyframe = Keyframe.ofFloat(1f, -270f);
         val canvasRotationPhaseTwoHolder = PropertyValuesHolder.ofKeyframe(
             CANVAS_ROTATION,
-            canvasRotationPhaseTwoStartingKeyframe,
+            canvasRotationPhaseTwoStartKeyframe,
             canvasRotationPhaseTwoEndKeyframe
         );
         return ObjectAnimator.ofPropertyValuesHolder(

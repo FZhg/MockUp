@@ -2,8 +2,9 @@
 这是我完成Hencoder自定义绘制后的练习作品，具体内容访问[Hencoder官网仿写练习网页](https://hencoder.com/activity-mock-2/)。
 
 ## 2020-3-27 Flipboard仿写
-<img src="/images/4parts.png" width="48">  
-我经历几次尝试和失败后，在将Demo.gif文件转化为每一帧后找到了实现思路。首先将图像分为如图四个部分，图像动画可以分为如下步骤：  
+<img src="/images/4parts.png" width="96">  
+我经历几次尝试和失败后，在将Demo.gif文件转化为每一帧后找到了实现思路。首先将图像分为如图四个部分，图像动画可以分为如下步骤去（为了简便，向屏幕外旋转称为升起，向屏幕选择称为降落）：  
+1. 2和4部分升起\alpha角度
 
 ##### 参考资料
 [1] 贾元斌，https://github.com/sunnyxibei/HenCoderPractice  
