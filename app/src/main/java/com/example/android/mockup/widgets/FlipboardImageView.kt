@@ -133,7 +133,6 @@ class FlipboardImageView : androidx.appcompat.widget.AppCompatImageView {
      */
     private val animatorSet = AnimatorSet().apply {
         playSequentially(animatorPhaseOne, animatorPhaseTwo, animatorPhaseThree)
-//        play(animatorPhaseOne)
     }
 
     /**
@@ -250,12 +249,12 @@ class FlipboardImageView : androidx.appcompat.widget.AppCompatImageView {
         canvas.rotate(-canvasRotation)
         canvas.translate(-centerX, -centerY)
         super.onDraw(canvas)
-
+        canvas.restore()
 //         Actually, I'm worried that the canvasRotation accessed here will be different from above due to different timing.
 //         I'm aware that the UI thread is not thread-safe, which means everything created in this thread stays here forever.
 //         But could objectAnimator update the value between the drawing of part1 and part 2.
 //         In this case, the animation will be gnarly.
-        canvas.restore()
+
     }
 
 
