@@ -15,13 +15,13 @@
 从hencoder practice 4最后的一个练习可以看出Step 1和5非常容易实现，使用canvas.clip方法和camera.rotate方法分块绘制，可以完成翻页角度的动画。关键是在Step2， 3， 和4。可以发现的是Step 2, 3, 4都在重复
 一个落下升起的周期运动，只不过把这个运动再不同方向重复。从这一点，只需完成落下升起动画，然后将canvas旋转到不同方位绘制即可。如图， 此时动画中保持静止的部分一定是落在旋转后canvas的裁剪范围内。可以想象canvas沿着中心，做平面转动，此时落在屏幕中轴线左边的便是已经落下的区域，即静止区域
 。图像剩下的部分就负责产生翻页的角度，如此就完了2，3， 4步骤。  
-<img src="/images/explanation_flipboard.png" width="400">    
+<img src="/images/explanation_flipboard.gif" width="400">    
 Step 1过后翻页角度是alpha，而Step 4过后，翻页角度同样是alpha。所以翻页角度的变化有如下两种可能：翻页角度保持alpha不变；或者翻页角度经历了从alpha到0再到alpha的多个循环。经过
 实际动画效果的检验，发现第一种可能的动画效果最为流畅。以下是最终效果图。  
-<img src="/images/demo_flipboard.png" width="400">     
+<img src="/images/demo_flipboard.gif" width="400">     
 
 
-// TO-DO:  
+##### TO-DOS
 
 
 1. 我继承的是ImageView，希望能接用xml的src属性和测量，布局的方法。但是发现ImageView会在最终测量范围里裁剪超出图像的部分。这就是的旋转的部分形变会出现不完整，目前的解决办法是将
